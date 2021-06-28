@@ -28,12 +28,12 @@ variable "vnf_cos_image_url" {
 # subnet_ids - Subnet where resources are to be provisioned.
 ##############################################################################
 variable "subnet_id1"{
-  default = ""
+  default = "0727-2db31977-c1d0-461d-b08c-e58a09db28e5"
   description =  "The id of the subnet to which Ubuntu VSI's first interface belongs to"
 }
 
 variable "subnet_id2"{
-  default = ""
+  default = "0727-5f0793b8-2ca3-43f9-b50c-df0cdf586417"
   description = "The id of the subnet to which Ubuntu VSI's second interface belongs to"
 }
 
