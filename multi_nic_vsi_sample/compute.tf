@@ -58,7 +58,7 @@ resource "ibm_is_security_group_rule" "vnf_sg_rule_out_all" {
 }
 
 //vnf instance 
-resource "vsrx211" "vnf_vsi" {
+resource "ibm_is_instance" "vnf_vsi" {
   depends_on = ["ibm_is_security_group_rule.vnf_sg_rule_out_all"]
   name           = "${var.vnf_instance_name}"
   image          = "${var.vnf_vpc_image_name}"
