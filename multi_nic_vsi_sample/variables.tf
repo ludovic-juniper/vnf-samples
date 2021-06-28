@@ -113,6 +113,7 @@ variable "api_key" {
 # vnf_securtiy_group - The security group to which the VSI interface belongs to.
 ##############################################################################
 variable "vnf_security_group" {
-  default     = "ubuntu-security-group"
+#  default     = "ubuntu-security-group"
+  default = ""
   description = "The security group for VNF VPC"
 }
