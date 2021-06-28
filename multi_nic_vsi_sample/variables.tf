@@ -7,10 +7,22 @@
 #                             The value for this variable is enter at offering
 #                             onbaording time.This variable is hidden from the user.
 ##############################################################################
+#variable "vnf_cos_image_url" {
+#  default     = ""
+#  description = "The COS image object SQL URL for Ubuntu qcow2 image."
+#}
+
+##############################################################################
+# vnf_cos_image_url - Vendor provided image COS url.
+#                             The value for this variable is enter at offering
+#                             onbaording time.This variable is hidden from the user.
+##############################################################################
 variable "vnf_cos_image_url" {
-  default     = ""
-  description = "The COS image object SQL URL for Ubuntu qcow2 image."
+#  default     = "cos://ap-geo/asloma-juniper-bucket/junos-vsrx3-x86-64-19.4R3.11.qcow2"
+  default     = "cos://eu-de/vsrx-eu-de-cos-bucket/junos-vsrx3-x86-64-21.1R1.11.qcow2"
+  description = "The COS image object SQL URL for vSRX 19.4R3.11 qcow2 image."
 }
+
 
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
@@ -36,16 +48,32 @@ variable "ssh_key_name" {
 ##############################################################################
 # vnf_vpc_image_name - The name of the Ubuntu custom image to be provisioned in your IBM Cloud account.
 ##############################################################################
+#variable "vnf_vpc_image_name" {
+#  default     = "ubuntu18-04"
+#  description = "The name of the Ubuntu custom image to be provisioned in your IBM Cloud account."
+#}
+
+##############################################################################
+# vnf_vpc_image_name - The name of the Custom image to be provisioned in your IBM Cloud account.
+##############################################################################
 variable "vnf_vpc_image_name" {
-  default     = "ubuntu18-04"
-  description = "The name of the Ubuntu custom image to be provisioned in your IBM Cloud account."
+  default     = "ludovic-juniper-vsrx3-211"
+  description = "The name of the Custom image to be provisioned in your IBM Cloud account."
+}
+
+##############################################################################
+# image_operating_system - Description of underlying OS of an image.
+##############################################################################
+variable "image_operating_system" {
+  default     = "centos-7-amd64"
+  description = "Description of underlying OS of an image."
 }
 
 ##############################################################################
 # vnf_vpc_image_name - The name of your Ubuntu Virtual Server to be provisioned
 ##############################################################################
 variable "vnf_instance_name" {
-  default     = "ubuntu18-04-vsi"
+  default     = "vsrx3-21-1-vsi"
   description = "The name of your Ubuntu Virtual Server to be provisioned."
 }
 
