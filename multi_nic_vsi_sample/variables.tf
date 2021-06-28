@@ -114,6 +114,7 @@ variable "api_key" {
 ##############################################################################
 variable "vnf_security_group" {
 #  default     = "ubuntu-security-group"
-  default = ""
+  type = string
+  default = "vnf-security-group"
   description = "The security group for VNF VPC"
 }
