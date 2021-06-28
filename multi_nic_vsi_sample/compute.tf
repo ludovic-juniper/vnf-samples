@@ -26,7 +26,7 @@ data "ibm_is_instance_profile" "vnf_profile" {
 resource "ibm_is_security_group" "vnf_security_group" {
   name           = "${var.vnf_security_group}"
   vpc            = "${data.ibm_is_subnet.vnf_subnet1.vpc}"
-  resource_group = "${data.ibm_is_subnet.vnf_subnet1.resource_group}"
+#  resource_group = "${data.ibm_is_subnet.vnf_subnet1.resource_group}"
 }
 
 //security group rule to allow ssh
@@ -63,7 +63,7 @@ resource "ibm_is_instance" "vnf_vsi" {
   name           = "${var.vnf_instance_name}"
   image          = "${var.vnf_vpc_image_name}"
   profile        = "${data.ibm_is_instance_profile.vnf_profile.name}"
-  resource_group = "${data.ibm_is_subnet.vnf_subnet1.resource_group}"
+#  resource_group = "${data.ibm_is_subnet.vnf_subnet1.resource_group}"
 
   primary_network_interface {
     name = "eth0"
