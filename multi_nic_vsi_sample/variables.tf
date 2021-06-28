@@ -27,23 +27,23 @@ variable "vnf_cos_image_url" {
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
 ##############################################################################
-variable "subnet_id1"{
-  default = "0727-2db31977-c1d0-461d-b08c-e58a09db28e5"
-  description =  "The id of the subnet to which Ubuntu VSI's first interface belongs to"
-}
+#variable "subnet_id1"{
+#  default = "0727-2db31977-c1d0-461d-b08c-e58a09db28e5"
+#  description =  "The id of the subnet to which Ubuntu VSI's first interface belongs to"
+#}
 
-variable "subnet_id2"{
-  default = "0727-5f0793b8-2ca3-43f9-b50c-df0cdf586417"
-  description = "The id of the subnet to which Ubuntu VSI's second interface belongs to"
-}
+#variable "subnet_id2"{
+#  default = "0727-5f0793b8-2ca3-43f9-b50c-df0cdf586417"
+#  description = "The id of the subnet to which Ubuntu VSI's second interface belongs to"
+#}
 
 ##############################################################################
 # ssh_key_name - The name of the public SSH key to be used when provisining Ubuntu VSI.
 ##############################################################################
-variable "ssh_key_name" {
-  default     = "vsrx-public-ssh-key"
-  description = "The name of the public SSH key to be used when provisining Ubuntu VSI."
-}
+#variable "ssh_key_name" {
+#  default     = "vsrx-public-ssh-key"
+#  description = "The name of the public SSH key to be used when provisining Ubuntu VSI."
+#}
 
 ##############################################################################
 # vnf_vpc_image_name - The name of the Ubuntu custom image to be provisioned in your IBM Cloud account.
