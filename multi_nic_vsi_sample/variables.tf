@@ -41,7 +41,7 @@ variable "subnet_id2"{
 # ssh_key_name - The name of the public SSH key to be used when provisining Ubuntu VSI.
 ##############################################################################
 variable "ssh_key_name" {
-  default     = ""
+  default     = "vsrx-public-ssh-key"
   description = "The name of the public SSH key to be used when provisining Ubuntu VSI."
 }
 
