@@ -28,14 +28,20 @@ variable "vnf_cos_image_url" {
 # subnet_ids - Subnet where resources are to be provisioned.
 ##############################################################################
 variable "subnet_id1"{
-#  default = "0727-2db31977-c1d0-461d-b08c-e58a09db28e5"
-  default = ""
+  default = "0727-742e8330-52c1-4c95-98e3-3d1e00ef32eb"
+#  default = ""
   description =  "The id of the subnet to which Ubuntu VSI's first interface belongs to"
 }
 
 variable "subnet_id2"{
-#  default = "0727-5f0793b8-2ca3-43f9-b50c-df0cdf586417"
-  default = ""
+  default = "0727-2db31977-c1d0-461d-b08c-e58a09db28e5"
+#  default = ""
+  description = "The id of the subnet to which Ubuntu VSI's second interface belongs to"
+}
+
+variable "subnet_id3"{
+  default = "0727-5f0793b8-2ca3-43f9-b50c-df0cdf586417"
+#  default = ""
   description = "The id of the subnet to which Ubuntu VSI's second interface belongs to"
 }
 
@@ -43,8 +49,8 @@ variable "subnet_id2"{
 # ssh_key_name - The name of the public SSH key to be used when provisining Ubuntu VSI.
 ##############################################################################
 variable "ssh_key_name" {
-#  default     = "vsrx-public-ssh-key"
-  default = ""
+  default     = "vsrx-public-ssh-key"
+  #  default = ""
   description = "The name of the public SSH key to be used when provisining Ubuntu VSI."
 }
 

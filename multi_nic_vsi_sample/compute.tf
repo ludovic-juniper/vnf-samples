@@ -78,6 +78,13 @@ resource "ibm_is_instance" "vnf_vsi" {
     #security_groups = ["${ibm_is_security_group.vnf_security_group.id}"]
   }
 
+    network_interfaces {
+    name   = "eth2"
+    subnet = "${data.ibm_is_subnet.vnf_subnet3.id}"
+    //if vnf_security_group need to be added in this interface then uncomment below line
+    #security_groups = ["${ibm_is_security_group.vnf_security_group.id}"]
+  }
+
   vpc  = "${data.ibm_is_subnet.vnf_subnet1.vpc}"
   zone = "${data.ibm_is_subnet.vnf_subnet1.zone}"
   keys = ["${data.ibm_is_ssh_key.vnf_ssh_pub_key.id}"]
