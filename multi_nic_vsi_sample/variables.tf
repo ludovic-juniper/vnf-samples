@@ -66,7 +66,7 @@ variable "ssh_key_name" {
 # vnf_vpc_image_name - The name of the Custom image to be provisioned in your IBM Cloud account.
 ##############################################################################
 variable "vnf_vpc_image_name" {
-  default     = "ludovic-juniper-vsrx3-211"
+  default     = "ludovic-juniper-vsrx3-211-3int"
   description = "The name of the Custom image to be provisioned in your IBM Cloud account."
 }
 
