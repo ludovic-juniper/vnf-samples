@@ -55,14 +55,6 @@ variable "ssh_key_name" {
 }
 
 ##############################################################################
-# vnf_vpc_image_name - The name of the Ubuntu custom image to be provisioned in your IBM Cloud account.
-##############################################################################
-#variable "vnf_vpc_image_name" {
-#  default     = "ubuntu18-04"
-#  description = "The name of the Ubuntu custom image to be provisioned in your IBM Cloud account."
-#}
-
-##############################################################################
 # vnf_vpc_image_name - The name of the Custom image to be provisioned in your IBM Cloud account.
 ##############################################################################
 variable "vnf_vpc_image_name" {
@@ -79,7 +71,7 @@ variable "image_operating_system" {
 }
 
 ##############################################################################
-# vnf_vpc_image_name - The name of your Ubuntu Virtual Server to be provisioned
+# vnf_instance_name - The name of your Ubuntu Virtual Server to be provisioned
 ##############################################################################
 variable "vnf_instance_name" {
   default     = "vsrx3-21-1-vsi"
